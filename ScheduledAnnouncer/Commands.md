@@ -1,0 +1,11 @@
+Commands:
+/speech on
+-turns on announcing
+/speech off
+-turns off announcing
+/speech set <sentence to announce> <sequence:sec>
+set announce sequence and a sentence to announce
+*the sentence can include a space
+/speech set Hello World! 2
+sentence to announce-Hello World!
+announce sequence-2 sec
