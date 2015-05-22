@@ -1,2 +1,2 @@
-# ModPE-Scripts
-ModPE-Script storage
+# Javascript-Libraries
+Javascript Libraries storage
