@@ -1,0 +1,50 @@
+How to make a queue:
+var queue=new Queue(element0, [element1, [...[, elementN]]]);
+or
+var queue=Queue(element0, [element1, [...[, elementN]]]);
+How to make a stack:
+var queue=new Stack(element0, [element1, [...[, elementN]]]);
+or
+var queue=Stack(element0, [element1, [...[, elementN]]]);
+Methods of Queue
+Queue.fromArray(array)
+Converts an array to queue
+Queue.fromStack(array)
+Converts a stack to queue
+Properties of Queue instances
+Queue.prototype.length
+Reflects the number of elements
+Methods of Queue instances
+Queue.prototype.iterateOver(callback)
+Calls the callback for each elements, giving first argument element, second argument index, last argument object which is iterated
+Queue.prototype.put([element0, [element1, [...[, elementN]]]])
+Puts the all arguments passed to this method
+Queue.prototype.get(amount)
+Gets elements by the amount
+Queue.prototype.toArray()
+Converts to an array
+Queue.prototype.toStack()
+Converts to a stack
+Queue.prototype.toString()
+Converts to a string
+Methods of Stack
+Stack.fromArray(array)
+Converts an array to stack
+Stack.fromQueue(array)
+Converts a queue to stack
+Properties of Stack instances
+Stack.prototype.length
+Reflects the number of elements
+Methods of Stack instances
+Stack.prototype.iterateOver(callback)
+Calls the callback for each elements, giving first argument element, second argument index, last argument object which is iterated
+Stack.prototype.push([element0, [element1, [...[, elementN]]]])
+Pushes the all arguments passed to this method
+Stack.prototype.pop(amount)
+Pops elements by the amount
+Stack.prototype.toArray()
+Converts to an array
+Stack.prototype.toQueue()
+Converts to a queue
+Stack.prototype.toString()
+Converts to a string
