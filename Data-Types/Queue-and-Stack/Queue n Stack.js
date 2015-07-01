@@ -21,7 +21,7 @@ function Queue(){
 				delete this[i];
 			}
 		}
-		this.length=this.length-v;
+		this.length-=v;
 		return tmp;
 	};
 	this.toArray=function(){
@@ -35,6 +35,10 @@ function Queue(){
 	this.toString=function(){
 		return this.toArray().toString();
 	};
+	this._arrMethod=function(callback,argument){
+		if(argument.constructor!=Array)argument=[argument];
+		return Array.prototype[callback].apply(this,argument);
+	};
 	return this;
 }
 Queue.fromArray=function(arr){
@@ -45,7 +49,7 @@ Queue.fromStack=function(stack){
 };
 function Stack(){
 	if(this==(function(){return this;}).call(null))return Stack.apply({},Array.prototype.slice.call(arguments));
-	for(i=0;i<arguments.length;i++)this[i]=arguments[i];
+	for(i=0;i<arguments.lendgth;i++)this[i]=arguments[i];
 	this.length=arguments.length;
 	this.iterateOver=function(callback){
 		for(i=0;i<this.length;i++)callback(this[i],i,this);
@@ -57,7 +61,7 @@ function Stack(){
 	this.pop=function(v){
 		var tmp=[];
 		for(i=this.length-v;i<this.length;i++){tmp.push(this[i]);delete this[i];}
-		this.length=this.length-v;
+		this.length-=v;
 		return tmp;
 	};
 	this.toArray=function(){
@@ -70,6 +74,10 @@ function Stack(){
 	};
 	this.toString=function(){
 		return this.toArray().toString();
+	};
+	this._arrMethod=function(callback,argument){
+		if(argument.constructor!=Array)argument=[argument];
+		return Array.prototype[callback].apply(this,argument);
 	};
 	return this;
 }
