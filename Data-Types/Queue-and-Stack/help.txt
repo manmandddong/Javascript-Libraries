@@ -27,6 +27,9 @@ Queue.prototype.toStack()
 Converts to a stack
 Queue.prototype.toString()
 Converts to a string
+Queue.prototype._arrMethod(funcName,argArray);
+Invokes Array instance methods, binding this to this
+*It will slightly malfunction to some methods,like Array.prototype.map*
 Methods of Stack
 Stack.fromArray(array)
 Converts an array to stack
@@ -48,3 +51,6 @@ Stack.prototype.toQueue()
 Converts to a queue
 Stack.prototype.toString()
 Converts to a string
+Stack.prototype._arrMethod(funcName,argArray);
+Invokes Array instance methods, binding this to this
+*It will slightly malfunction to some methods,like Array.prototype.map*
